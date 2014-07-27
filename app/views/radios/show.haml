@@ -1,0 +1,13 @@
+%h1 Radios List
+
+%h2 All Radios : - #{@radios.length}
+%table
+  %tbody
+    - @radios.each do |row|
+      %tr
+        %td= row.title
+        %td= row.frequency
+        %td= row.city
+        %td= row.url + ":" + row.port
+        %td= getTimezonesString(row)
+
