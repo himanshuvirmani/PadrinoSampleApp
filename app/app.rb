@@ -9,6 +9,9 @@ module RadioNation
 
     enable :sessions
 
+    use Rack::Auth::Basic, "Need Authentication to proceed" do |username, password|
+      username == 'foo' && password == 'bar'
+    end
 
     get "/radios" do
       radios = City.all
@@ -17,8 +20,8 @@ module RadioNation
 
 
     get :show do
-       @radios = Radio.all
-       render 'radios/show'
+      @radios = Radio.all
+      render 'radios/show'
     end
 
     def getTimezonesString(radio)
