@@ -14,8 +14,18 @@ module RadioNation
     end
 
     get "/radios" do
+      puts params[:uuid]
+      puts params[:email]
+      user = User.first_or_create({:uuid => params[:uuid]},{
+        :uuid => params[:uuid],
+        :email => params[:email],
+        :source => params[:source]
+      })
+      user.save
       radios = City.all
-      return radios.to_json(:methods => [:radios])
+      json = radios.to_json(:methods => [:radios])
+      puts json
+      return json
     end
 
 
