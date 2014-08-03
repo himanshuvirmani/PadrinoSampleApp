@@ -6,6 +6,7 @@ module RadioNation
   class App < Padrino::Application
     register Padrino::Mailer
     register Padrino::Helpers
+    register SassInitializer
 
     enable :sessions
 

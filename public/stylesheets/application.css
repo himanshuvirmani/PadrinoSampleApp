@@ -1,0 +1,13 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: #e6e0d9; }
+
+#main #show table {
+  margin: 1em;
+  border-collapse: collapse; }
+#main #show td, #main #show th {
+  padding: 0.3em;
+  border: 1px #cccccc solid; }
+#main #show thead {
+  background: #ffcc99; }

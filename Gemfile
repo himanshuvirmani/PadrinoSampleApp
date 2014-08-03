@@ -25,6 +25,7 @@ gem 'dm-types'
 gem 'dm-core'
 gem 'dm-serializer'
 gem 'haml'
+gem 'sass'
 
 # Test requirements
 
