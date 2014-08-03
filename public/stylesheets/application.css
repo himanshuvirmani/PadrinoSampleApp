@@ -8,6 +8,6 @@ body {
   border-collapse: collapse; }
 #main #show td, #main #show th {
   padding: 0.3em;
-  border: 1px #cccccc solid; }
+  border: 1px #a0a0a0 solid; }
 #main #show thead {
   background: #ffcc99; }
