@@ -14,8 +14,8 @@ module RadioNation
     end
 
     get "/radios" do
-      puts params[:uuid]
-      puts params[:email]
+      logger.info params[:uuid]
+      logger.info params[:email]
       user = User.first_or_create({:uuid => params[:uuid]},{
         :uuid => params[:uuid],
         :email => params[:email],
@@ -24,7 +24,7 @@ module RadioNation
       user.save
       radios = City.all
       json = radios.to_json(:methods => [:radios])
-      puts json
+      logger.info json
       return json
     end
 
@@ -43,7 +43,7 @@ module RadioNation
           timezonesString = timezonesString + "," + item.timezone
         end
       end
-      puts timezonesString
+      logger.info timezonesString
       return timezonesString
     end
   end

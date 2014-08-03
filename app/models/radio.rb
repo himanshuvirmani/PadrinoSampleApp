@@ -17,9 +17,9 @@ class Radio
 
 
   def to_json *a
-       puts "XXX super Called #{a} #{frequency} , #{city_name}"
+       logger.info "XXX super Called #{a} #{frequency} , #{city_name}"
        hash = {:methods => [:timezones], :exclude => [:city]}.merge(a.first)
-       puts "XXX hash value #{hash[:methods]}"
+       logger.info "XXX hash value #{hash[:methods]}"
        #return (Radio.all(:frequency => frequency)).to_json
        return super(hash)
        #super.to_json *a
