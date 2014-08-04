@@ -2,7 +2,8 @@
 %html
   %head
     !!! below line mentions to public folder and not the app stylesheets folder
-    %link(rel="stylesheet" type="text/css" href="stylesheets/application.css")
+    !!!%link(rel="stylesheet" type="text/css" href="stylesheets/application.css")
+    = stylesheet_link_tag 'application'
     %title Radios
   %body
     #main= yield
